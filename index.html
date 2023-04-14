@@ -10,12 +10,15 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div>
-        <div>
-            <img src="" alt="Logo">
-            <span>Logo text</span>
+    <div class="container">
+        <div class="image-container">
+            <div class="logo-container">
+                <img class="logo" src="images/odin-lined.png" alt="odin">
+                <h1>Odin</h1>
+            </div>
+            <p>Photo by <a href="https://unsplash.com/@p_kuzovkova?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Polina Kuzovkova</a> on <a href="https://unsplash.com/photos/sHmelOY1AWA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
         </div>
-        <div>
+        <div class="form-container">
             Sign up now to get started!
             You know what to do.
             Lets do this!
@@ -27,22 +30,46 @@
             (password strength - meter)
 
             <form action="" method="GET">
-                <label>First Name</label>
-                <input type="text">
-                <label>Last Name</label>
-                <input type="text">
-                <label>Email</label>
-                <input type="email">
-                <label>Phone Number</label>
-                <input type="text">
-                <label>Password</label>
-                <input type="password">
-                <label>Confirm Password</label>
-                <input type="password">
+
+                <div class="field-holder">
+                    <label for="first-name">First Name</label>
+                    <input id="first-name" type="text">
+                </div>
+
+                <div class="field-holder">
+                    <label for="last-name">Last Name</label>
+                    <input id="last-name" type="text">
+                </div>
+
+                <div class="field-holder">
+                    <label for="email">Email</label>
+                    <input id="email" type="email">
+                </div>
+
+                <div class="field-holder">
+                    <label for="phone-number">Phone Number</label>
+                    <input id="phone-number" type="text">
+                </div>
+
+                <div class="field-holder">
+                    <label for="password">Password</label>
+                    <input id="password" type="password">
+                </div>
+
+                <div class="field-holder">
+                    <label for="password-confirmation">Confirm Password</label>
+                    <input id="password-confirmation" type="password">
+                </div>
+
+                <div class="field-holder">
+                    <input type="checkbox" id="privacy-policy" name="privacy-policy">
+                    <label for="privacy-policy">I agree to the terms and conditions as set out by the user agreement and the <a href="#">Privacy Policy</a></label>
+                </div>
 
                 <button type="submit">Create Account</button>
-                <span>Already have an account? <a href="#">Log in</a></span>
+
             </form>
+            <span>Already have an account? <a href="#">Log in</a></span>
         </div>
     </div>
     <script src="js/main.js"></script>
