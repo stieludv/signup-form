@@ -31,39 +31,43 @@
 
             <form action="" method="GET">
 
-                <div class="field-holder">
-                    <label for="first-name">First Name</label>
-                    <input id="first-name" type="text">
+                <div class="field-holder-pair">
+                    <div class="field-holder">
+                        <input placeholder="&nbsp;" id="first-name" type="text">
+                        <label for="first-name">First Name</label>
+                    </div>
+                    <div class="field-holder">
+                        <input placeholder="&nbsp;" id="last-name" type="text">
+                        <label for="last-name">Last Name</label>
+                    </div>
                 </div>
 
-                <div class="field-holder">
-                    <label for="last-name">Last Name</label>
-                    <input id="last-name" type="text">
+                <div class="field-holder-pair">
+                    <div class="field-holder">
+                        <input placeholder="&nbsp;" id="email" type="email">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="field-holder">
+                        <input placeholder="&nbsp;" id="phone-number" type="text">
+                        <label for="phone-number">Phone Number</label>
+                    </div>
                 </div>
 
-                <div class="field-holder">
-                    <label for="email">Email</label>
-                    <input id="email" type="email">
-                </div>
 
-                <div class="field-holder">
-                    <label for="phone-number">Phone Number</label>
-                    <input id="phone-number" type="text">
-                </div>
-
-                <div class="field-holder">
-                    <label for="password">Password</label>
-                    <input id="password" type="password">
-                </div>
-
-                <div class="field-holder">
-                    <label for="password-confirmation">Confirm Password</label>
-                    <input id="password-confirmation" type="password">
+                <div class="field-holder-pair">
+                    <div class="field-holder">
+                        <input placeholder="&nbsp;" id="password" type="password">
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="field-holder">
+                        <input placeholder="&nbsp;" id="password-confirmation" type="password">
+                        <label for="password-confirmation">Confirm Password</label>
+                    </div>
                 </div>
 
                 <div class="field-holder">
                     <input type="checkbox" id="privacy-policy" name="privacy-policy">
-                    <label for="privacy-policy">I agree to the terms and conditions as set out by the user agreement and the <a href="#">Privacy Policy</a></label>
+                    <label checkbox for="privacy-policy">I agree to the terms and conditions as set out by the user agreement and the <a href="#">Privacy Policy</a></label>
                 </div>
 
                 <button type="submit">Create Account</button>

@@ -83,22 +83,38 @@ a {
 
 .field-holder {
     position: relative;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
 }
 
-.field-holder > label {
+.field-holder > label:not([checkbox]) {
     position: absolute;
+    left: 0;
 }
 
 .field-holder > input {
     border-width: 0px 0px 3px 0px;
 }
 
-.field-holder > input:focus + label {
-    font-size: 10px;
+.field-holder > input:not([type="checkbox"]):focus + label, .field-holder > input:not([type="checkbox"]):not(:placeholder-shown) + label, .field-holder > input:not([type="checkbox"]):-webkit-autofill + label {
+    font-size: 0.9rem;
+    top: calc(-0.9rem - 6px);
+}
+
+.field-holder-pair {
+    display: flex;
+    gap: 2rem;
 }
 
 @media screen and (max-width: 720px) {
     .container {
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .field-holder-pair {
+        flex-direction: column;
+        gap: 0;
     }
 }
