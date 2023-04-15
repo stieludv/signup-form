@@ -19,61 +19,68 @@
             <p>Photo by <a href="https://unsplash.com/@p_kuzovkova?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Polina Kuzovkova</a> on <a href="https://unsplash.com/photos/sHmelOY1AWA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
         </div>
         <div class="form-container">
-            Sign up now to get started!
-            You know what to do.
-            Lets do this!
-
-            Email
-            Phone Number
-            Password
-            Confirm Password
-            (password strength - meter)
-
-            <form action="" method="GET">
-
-                <div class="field-holder-pair">
-                    <div class="field-holder">
-                        <input placeholder="&nbsp;" id="first-name" type="text">
-                        <label for="first-name">First Name</label>
+            <div class="form-side-container">
+                <p>
+                    This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.
+                </p>
+                <p>
+                    Sign up now to get started!
+                    You know you want to.
+                </p>
+            </div>
+            <div class="form-side-container">
+                <h2>Lets do this!</h2>
+                <form action="" method="GET">
+                    <div class="field-holder-pair">
+                        <div class="field-holder">
+                            <input placeholder="&nbsp;" id="first-name" type="text" required name="first-name">
+                            <label for="first-name">First Name</label>
+                        </div>
+                        <div class="field-holder">
+                            <input placeholder="&nbsp;" id="last-name" type="text" name="last-name">
+                            <label for="last-name">Last Name</label>
+                        </div>
                     </div>
-                    <div class="field-holder">
-                        <input placeholder="&nbsp;" id="last-name" type="text">
-                        <label for="last-name">Last Name</label>
+                    <div class="field-holder-pair">
+                        <div class="field-holder">
+                            <input placeholder="&nbsp;" id="email" type="email" name="email" required>
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="field-holder">
+                            <input placeholder="&nbsp;" id="phone-number" type="text" name="phone">
+                            <label for="phone-number">Phone Number</label>
+                        </div>
                     </div>
-                </div>
-
-                <div class="field-holder-pair">
-                    <div class="field-holder">
-                        <input placeholder="&nbsp;" id="email" type="email">
-                        <label for="email">Email</label>
+                    <div class="field-holder-pair">
+                        <div class="field-holder">
+                            <input placeholder="&nbsp;" id="password" type="password" name="password" required>
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="field-holder">
+                            <input placeholder="&nbsp;" id="password-confirmation" type="password" name="confirmed-password" required>
+                            <label for="password-confirmation">Confirm Password</label>
+                        </div>
                     </div>
-                    <div class="field-holder">
-                        <input placeholder="&nbsp;" id="phone-number" type="text">
-                        <label for="phone-number">Phone Number</label>
-                    </div>
-                </div>
-
-
-                <div class="field-holder-pair">
-                    <div class="field-holder">
-                        <input placeholder="&nbsp;" id="password" type="password">
-                        <label for="password">Password</label>
-                    </div>
-                    <div class="field-holder">
-                        <input placeholder="&nbsp;" id="password-confirmation" type="password">
-                        <label for="password-confirmation">Confirm Password</label>
-                    </div>
-                </div>
-
-                <div class="field-holder">
-                    <input type="checkbox" id="privacy-policy" name="privacy-policy">
-                    <label checkbox for="privacy-policy">I agree to the terms and conditions as set out by the user agreement and the <a href="#">Privacy Policy</a></label>
-                </div>
-
-                <button type="submit">Create Account</button>
-
-            </form>
-            <span>Already have an account? <a href="#">Log in</a></span>
+<!--                     <div class="field-holder-pair">
+                        <div class="password-meter">
+                            <meter id="password-strength"
+                                min="0" max="100"
+                                low="33" high="66" optimum="80"
+                                value="70">
+                                Medium
+                            </meter>
+                        </div>
+                    </div> -->
+<!--                     <div class="field-holder">
+                        <input type="checkbox" id="privacy-policy" name="privacy-policy">
+                        <label checkbox for="privacy-policy">I agree to the terms and conditions as set out by the user agreement and the <a href="#">Privacy Policy</a></label>
+                    </div> -->
+                    <div class="field-holder"><button type="submit">Create Account</button></div>
+                </form>
+            </div>
+            <div class="form-side-container">
+                <span class="login">Already have an account? <a href="#">Log in</a></span>
+            </div>
         </div>
     </div>
     <script src="js/main.js"></script>

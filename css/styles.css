@@ -8,7 +8,35 @@
 }
 
 a {
-    /* color: white; */
+    color: steelblue;
+}
+
+button {
+    border-color: rgb(21, 72, 113);
+    border-style: solid;
+    background: linear-gradient(steelblue, rgb(21, 72, 113), steelblue);
+    background-size: 100% 200%;
+    background-position: top;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 25px 10px 25px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+input {
+    padding: 2px;
+    width: 200px;
+}
+
+button:hover, button:focus {
+    background-position: bottom;
+    border-color: steelblue;
+    outline: none;
+}
+
+button:active {
+    box-shadow: 2px 2px 5px steelblue;
 }
 
 .container {
@@ -70,13 +98,34 @@ a {
 }
 
 .form-container {
-    margin: 1rem;
+    /* margin: 1rem; */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 2rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    max-width: 500px;
 }
 
-.form-container > form {
+.form-side-container {
+    padding: 1rem;
+    height: 100%;
+}
+
+.form-side-container:first-child {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.form-side-container:last-child {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.form-side-container > form {
     display: flex;
     flex-direction: column;
 }
@@ -90,20 +139,70 @@ a {
 .field-holder > label:not([checkbox]) {
     position: absolute;
     left: 0;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: gray;
+}
+
+.field-holder > label[checkbox] {
+    font-size: 0.9rem;
 }
 
 .field-holder > input {
     border-width: 0px 0px 3px 0px;
+    border-color: gray;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.field-holder > input:focus {
+    border-color: steelblue;
+    /* outline-style: dotted; */
+    outline: none;
 }
 
 .field-holder > input:not([type="checkbox"]):focus + label, .field-holder > input:not([type="checkbox"]):not(:placeholder-shown) + label, .field-holder > input:not([type="checkbox"]):-webkit-autofill + label {
     font-size: 0.9rem;
     top: calc(-0.9rem - 6px);
+    color: steelblue;
+}
+
+.field-holder > input:not(:placeholder-shown):valid + label {
+    color: rgb(43, 155, 43);
+}
+
+.field-holder > input:not(:placeholder-shown):valid {
+    border-color: rgb(43, 155, 43);
+}
+
+.field-holder > input:not(:placeholder-shown):invalid + label {
+    color: red;
+}
+
+.field-holder > input:not(:placeholder-shown):invalid {
+    border-color: red;
+}
+
+.field-holder > input:not([type="checkbox"]):not(:placeholder-shown):valid + label {
+    color: rgb(43, 155, 43);
+}
+
+.field-holder > input:not([type="checkbox"]):not(:placeholder-shown):invalid + label {
+    color: red;
 }
 
 .field-holder-pair {
     display: flex;
     gap: 2rem;
+    margin-top: 1rem;
+}
+
+.login {
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 900px) {
+    .field-holder-pair {
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 720px) {
@@ -116,5 +215,11 @@ a {
     .field-holder-pair {
         flex-direction: column;
         gap: 0;
+    }
+    .form-container {
+        margin-left: 5vw;
+        margin-right: 0;
+        align-items: center;
+        max-width: 90vw;        
     }
 }
