@@ -4,20 +4,26 @@
 }
 
 :root {
+    --main-color: steelblue;
+    --main-dark-color: rgb(21, 72, 113);
+    --light-color: white;
+    --dark-color: black;
+    --valid-color: rgb(43, 155, 43);
+    --invalid-color: red;
     font-family: 'Roboto', sans-serif;
 }
 
 a {
-    color: steelblue;
+    color: var(--main-color);
 }
 
 button {
-    border-color: rgb(21, 72, 113);
+    border-color: var(--main-dark-color);
     border-style: solid;
-    background: linear-gradient(steelblue, rgb(21, 72, 113), steelblue);
+    background: linear-gradient(var(--main-color), var(--main-dark-color), var(--main-color));
     background-size: 100% 200%;
     background-position: top;
-    color: white;
+    color: var(--light-color);
     border-radius: 5px;
     padding: 10px 25px 10px 25px;
     cursor: pointer;
@@ -32,12 +38,12 @@ input {
 
 button:hover, button:focus {
     background-position: bottom;
-    border-color: steelblue;
+    border-color: var(--main-color);
     outline: none;
 }
 
 button:active {
-    box-shadow: 2px 2px 5px steelblue;
+    box-shadow: 2px 2px 5px var(--main-color);
 }
 
 .container {
@@ -79,7 +85,7 @@ button:active {
 }
 
 .logo-container > h1 {
-    color: white;
+    color: var(--light-color);
     font-family: "Odin";
     line-height: 0.8rem;
     max-height: 100%;
@@ -91,12 +97,12 @@ button:active {
 .image-container > p {
     position: absolute;
     bottom: 0;
-    color: white;
+    color: var(--light-color);
     font-size: 0.8rem;
 }
 
 .image-container > p > a {
-    color: white;    
+    color: var(--light-color);    
 }
 
 .form-container {
@@ -127,7 +133,7 @@ button:active {
 
 .form-side-container:nth-child(2) {
     box-shadow: 0px 3px 6px lightgray;
-    background-color: white;
+    background-color: var(--light-color);
 }
 
 .form-side-container h2 {
@@ -163,7 +169,7 @@ button:active {
 }
 
 .field-holder > input:focus {
-    border-color: steelblue;
+    border-color: var(--main-color);
     /* outline-style: dotted; */
     outline: none;
 }
@@ -171,31 +177,31 @@ button:active {
 .field-holder > input:not([type="checkbox"]):focus + label, .field-holder > input:not([type="checkbox"]):not(:placeholder-shown) + label, .field-holder > input:not([type="checkbox"]):-webkit-autofill + label {
     font-size: 0.9rem;
     top: calc(-0.9rem - 6px);
-    color: steelblue;
+    color: var(--main-color);
 }
 
 .field-holder > input:not(:placeholder-shown):valid + label {
-    color: rgb(43, 155, 43);
+    color: var(--valid-color);
 }
 
 .field-holder > input:not(:placeholder-shown):valid {
-    border-color: rgb(43, 155, 43);
+    border-color: var(--valid-color);
 }
 
 .field-holder > input:not(:placeholder-shown):invalid + label {
-    color: red;
+    color: var(--invalid-color);
 }
 
 .field-holder > input:not(:placeholder-shown):invalid {
-    border-color: red;
+    border-color: var(--invalid-color);
 }
 
 .field-holder > input:not([type="checkbox"]):not(:placeholder-shown):valid + label {
-    color: rgb(43, 155, 43);
+    color: var(--valid-color);
 }
 
 .field-holder > input:not([type="checkbox"]):not(:placeholder-shown):invalid + label {
-    color: red;
+    color: var(--invalid-color);
 }
 
 .field-holder-pair {
@@ -211,6 +217,8 @@ button:active {
 @media screen and (max-width: 900px) {
     .field-holder-pair {
         flex-direction: column;
+        gap: 0;
+        margin-top: 0;
     }
 }
 
@@ -226,9 +234,7 @@ button:active {
         gap: 0;
     }
     .form-container {
-        margin-left: 5vw;
         margin-right: 0;
         align-items: center;
-        max-width: 90vw;        
     }
 }
