@@ -17,6 +17,46 @@ a {
     color: var(--main-color);
 }
 
+.field-holder {
+    --first-name-error: "";
+    --last-name-error: "";
+    --email-error: "";
+    --phone-error: "";
+    --password-error: "";
+    --password-confirmation-error: "";
+}
+
+.field-holder::before {
+    color: red;
+    margin-top: 28px;
+    position: absolute;
+    font-size: 0.85rem;
+}
+
+.field-holder[firstname]::before {
+    content: var(--first-name-error);
+}
+
+.field-holder[lastname]::before {
+    content: var(--last-name-error);
+}
+
+.field-holder[email]::before {
+    content: var(--email-error);
+}
+
+.field-holder[phone]::before {
+    content: var(--phone-error);
+}
+
+.field-holder[password]::before {
+    content: var(--password-error);
+}
+
+.field-holder[passwordconfirmation]::before {
+    content: var(--password-confirmation-error);
+}
+
 button {
     border-color: var(--main-dark-color);
     border-style: solid;
@@ -212,6 +252,10 @@ button:active {
 
 .login {
     font-size: 0.9rem;
+}
+
+.field-holder > input[required] + label::after {
+    content: " *";
 }
 
 @media screen and (max-width: 900px) {
